@@ -16,6 +16,26 @@ A Python tool for automated extraction of forestry metrics from 3D Point Clouds.
 * **Crown & Height:** Calculates full tree height and crown diameter.
 * **Output:** Generates individual CSV reports per species and a global summary CSV for all trees.
 
+## Configurations
+
+* **Input Folder:** All the point cloud files should be saved in a folder, and dividing species folders is the recommended structure:
+* /Input_Folder
+    ├── Acer_platanoides/
+    │   ├── tree_01.ply
+    │   ├── tree_02.pcd
+    ├── Betula_pendula/
+    │   ├── tree_01.ply
+    │   └── ...
+* **Parameters:**
+     * **Trunk Extraction:** This is the first height to cluster trunk out of other leaves, branches... The default setting is 0 to 1.5 meters.
+     * **Trunk Slicing:** This is at which height to measure the trunk diameter. The default setting is from 1.2m to 1.4m.
+     * **Clustering Parameter:** You can adjust the clustering density by epsilon distance. The default setting is 0.3m and 10 pts for a cluster.
+
+## Remind
+* All the point cloud trees should be cleaned as individual trees. Any attachments on trunks should be removed, as they will be counted as part of the trunk.
+* The point cloud trees export can be operated in Cloud Compare. After segmentation and cleaning, run cloud_compare.py to export the results to the folder. Then run the delete.py to remove the noise clouds since a complete tree cloud is usually >100kb at least.
+
+
 ## 🛠️ Installation
 
 ### Prerequisites

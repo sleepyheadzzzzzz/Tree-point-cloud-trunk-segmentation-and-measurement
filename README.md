@@ -1,6 +1,6 @@
-# Tree-point-cloud-processing-and-analysis
+# Tree-point-cloud-trunk-segmentation-and-measurement
 
-# Tree Point Cloud Analysis Tool
+# Tree Point Cloud Trunk Analysis Tool
 
 A Python tool for automated extraction of forestry metrics from 3D Point Clouds. This script processes batches of tree point clouds (e.g., PLY, PCD files) to calculate **Diameter at Breast Height (DBH)** using multiple fitting algorithms, **Tree Height**, **Crown Diameter**, and **Trunk Lean Angle**.
 
